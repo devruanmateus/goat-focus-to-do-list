@@ -1,0 +1,223 @@
+@charset "UTF-8";
+
+/* Importação da fonte Quicksand */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+/* Importação da fonte Righteous */
+@import url('https://fonts.googleapis.com/css2?family=Federo&display=swap');
+
+:root {
+    /* Cores de texto */
+    --text: black;
+    --text-light: #CDCDCD;
+
+    /* Cores de fundo */
+    --background: #fff;
+    --background-ultra-dark: black;
+    --background-dark: #1B1B1B;
+    --background-dark-light: #313131;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--background-ultra-dark);
+    color: #fff;
+}
+
+div#header-container {
+    display: flex;
+    width: 80%;
+}
+
+#logotipo {
+    font-family: "Federo", sans-serif;
+    text-align: center;
+    flex: 1;
+}
+
+#theme {
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+#theme span {
+    padding: 5px 10px 5px 10px;
+}
+
+#theme span:hover {
+    background-color: var(--background);
+    color: var(--text);
+    border-radius: 20px;
+    padding: 5px 10px 5px 10px;
+
+}
+
+#logotipo h1, #logotipo p {
+    margin: 0;
+}
+
+header > div:first-child {
+    margin-right: auto;
+}
+
+header > div:last-child {
+    margin-left: auto;
+}
+
+/* 
+-=#=- Estilização do container que armazena o conteúdo do site.
+*/
+div#content-container {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    font-family: 'Quicksand';
+}
+
+/* 
+-=#=- Botão para adicionar novas colunas de tarefas
+*/
+#add-col button {
+    padding: 25px;
+    background-color: #ffffff00;
+}
+
+#add-col button:hover {
+    background-color: #74747415;
+    cursor: pointer;
+}
+
+/* 
+-=#=- Estilização da coluna de tarefas
+*/
+div.col-tasks {
+    border: 1px solid #000000;
+    margin-right: 20px;
+    width: 300px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+div.head-col {
+    display: flex;
+    align-items: center;
+    background-color: var(--background-ultra-dark);
+    color: var(--text-light);
+    border-radius: 10px 10px 0px 0px;
+    padding: 10px;
+}
+
+div.head-col h1 {
+    width: 90%;
+    font-size: 18px;
+}
+
+div.head-col span {
+    margin-left: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* 
+-=#=- Estilização do botão de adicionar tarefas na coluna
+*/
+
+div.add-tasks {
+    padding: 0px 15px 15px 15px;
+    display: flex;
+    align-items: flex-end;
+}
+
+div.add-tasks button {
+    width: 100%;
+    padding: 7px;
+    background-color: #00000000;
+}
+
+div.add-tasks button:hover {
+    background-color: #0000001b;
+    cursor: pointer;
+}
+
+/* 
+-=#=- Estilização da caixa de tarefa
+*/
+div.task {
+    display: flex;
+    flex-flow: column wrap;
+    border: 1px solid #000000;
+    margin: 15px;
+}
+
+div.head-task {
+    display: flex;
+    width: 100%;
+    padding: 5px;
+    background-color: lightgray;
+}
+
+div.head-task h1 {
+    font-size: 16px;
+    width: 85%;
+}
+
+ /* Costumização da checkbox e do icone de remoção da task */
+div.flag {
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+div.flag input {
+    margin-right: 7px;
+}
+
+div.flag span {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Estilo da descrição */
+div.desc-task {
+    width: 100%;
+    padding: 5px;
+}
+
+div.desc-task p {
+    font-size: 14px;
+}
+
+.no-wrap {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.wrap {
+    white-space: normal;
+}
+
+/* Placeholder */
+.placeholder {
+    color: #999999;
+}
+
+.editableText {
+    cursor: default;
+    min-height: 1em;
+}
+
+.editableText[contenteditable="true"]:empty:before {
+    cursor: text;
+    content: attr(data-placeholder);
+    color: #999;
+}

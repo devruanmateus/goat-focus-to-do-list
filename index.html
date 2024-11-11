@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goat Focus</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+    <header>
+        <div id="header-container">
+            <div id="logotipo">
+                <h1>Goat Focus</h1>
+            </div>
+            <div id="theme">
+                <span id="alter-theme" class="material-symbols-outlined toggle">contrast</span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="content-container">
+            <div class="col-tasks">
+                <div class="head-col">
+                    <h1 class="editableText no-wrap" contenteditable="true" data-placeholder="Nome da lista"></h1>
+                    <span class="material-symbols-outlined remove-col" onabort="removeCol()">remove</span>
+                </div>
+
+                <div class="task">
+                    <div class="head-task">
+                        <h1 class="editableText no-wrap text-theme" contenteditable="true" data-placeholder="Adicione uma tarefa"></h1>
+                        <div class="flag">
+                            <input type="checkbox" name="finished" id="ifinished">
+                            <span class="material-symbols-outlined remove-task">remove</span>
+                        </div>
+                    </div>
+                    
+                    <div class="desc-task">
+                        <p class="editableText no-wrap text-theme" contenteditable="true" data-placeholder="Descrição..."></p>
+                    </div>
+                </div>
+
+                <div class="add-tasks">
+                    <button id="addTaskButton"><span class="material-symbols-outlined">add</span></button>
+                </div>
+            </div>
+
+            <div id="add-col">
+                <button class="btn-add-col"><span class="material-symbols-outlined">add</span></button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
